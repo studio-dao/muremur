@@ -1,28 +1,31 @@
+<!-- TEMPLATE -->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/Fruits">Fruits</router-link> |
+       <router-link to="/Legumes">Légumes</router-link> |
+        <router-link to="/A_propos">A_propos</router-link> |
+    </div>
+    <router-view />
+    <Footer />
   </div>
 </template>
 
+<!-- SCRIPT -->
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Footer,
+  },
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<!-- STYLE -->
+<style></style>
