@@ -3,13 +3,13 @@
   <header>
     <div class="main_header">
       <img src="" alt="" />
-      <nav class="nav_header">
-        <ul>
-          <li><a href="">Fruits</a></li>
-          <li><a href="">Légumes</a></li>
-          <li><a href="">À propos</a></li>
-        </ul>
-      </nav>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/Fruits">Fruits</router-link> |
+       <router-link to="/Legumes">Légumes</router-link> |
+        <router-link to="/A_propos">A_propos</router-link> |
+    </div>
+
       <input type="search" value="votre recherche" />
     </div>
     <div class="separateur"></div>
