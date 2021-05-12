@@ -34,7 +34,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center
+  align-items: center;
 }
 </style>
 

@@ -6,7 +6,7 @@
       <div class="main_CTA_produit">
         <div class="list_CTA_produit"  v-for="produit in liste_fruits" :key="produit.id">
           <button class="button_produit" @click="toggleModale();addToModale(produit)">
-            <img src="#" alt="icone fruit" />
+            <img :src='produit.picto' alt="icone fruit" />
             {{ produit.label }}
           </button>
         </div>
@@ -46,13 +46,14 @@ export default {
     };
   },
   computed: {
-    ...mapState(["liste_fruits"]),
+    ...mapState(["liste_fruits"])
   },
   methods: {
-    // ajouter contenu item à la amodale
+    // ajouter contenu item à la modale
     addToModale(produit) {
       this.modaleContent.push({
         id: produit.id,
+        picto: produit.picto,
         label: produit.label,
         maturite: produit.maturite,
         conservation: produit.conservation,
@@ -72,3 +73,7 @@ export default {
 </script>
 
 <!-- STYLE -->
+<style>
+
+</style>
+

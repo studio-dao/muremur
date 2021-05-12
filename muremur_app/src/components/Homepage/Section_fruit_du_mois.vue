@@ -1,14 +1,14 @@
 <!-- TEMPLATE -->
 <template>
   <section class="section_fdm">
-      <img src="" alt="">
     <article class="article_fdm">
-<h1 class="h1-fdm"> Le citron</h1>
-<h3>Le fruit de la semaine</h3>
-<p class="texte_fdm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Vivamus nec orci eget lacus gravida dapibus consequat non nisl. 
-    Pellentesque pulvinar magna ut condimentum varius.  </p>
-    <button disabled="disabled">Son histoire</button>
+      <h3 class="chapeau">Le fruit de la semaine</h3>
+      <h1 class="h1-fdm">Le citron</h1>
+      <p class="texte_fdm">
+        Découvrez l'histoire étonnante d'un grand voyageur qui a revolutionné le
+        goût en Europe...
+      </p>
+      <button class="button_fdm">SON HISTOIRE<i class="fas fa-caret-right fa-lg"></i></button>
     </article>
   </section>
 </template>
@@ -22,10 +22,67 @@ export default {
 
 <!-- STYLE -->
 <style>
-.section_fdm{
-    width: 95%;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "Paytone";
+  src: local("Paytone"),
+    url("~@/assets/fonts/PaytoneOne-Regular.ttf") format("truetype");
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .section_fdm {
+    left: 0;
+    right: 0;
+    padding: 10%;
     display: flex;
-    flex-direction: row;
-    border: 1px solid black
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background: linear-gradient(rgba(168, 168, 169, .4), rgba(168, 168, 169, .4)), url("~@/assets/images/photos/photo_citron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  .chapeau {
+    margin: 0 0 15% 0;
+    font-family: "Paytone";
+    color: #5a7516;
+    text-decoration: underline;
+  }
+
+  .h1-fdm {
+    margin: 0;
+    font-family: "Paytone";
+    color: #efeeee;
+    font-size: 3em;
+  }
+  .texte_fdm{
+    font-family:'Roboto';
+    font-size: 14px;
+    margin: 0 0 10% 0;
+    color: #efeeee;
+  }
+
+  .button_fdm{
+    margin: 0 0 10% 0;
+    padding:0 0 0 5%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #5a7516;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    background: linear-gradient(90deg,rgba(152,203,101, .5) 30%, rgba(255,235, .5) 80%);
+  }
+.fas{
+  margin-left: 70px;
+}
+
 }
 </style>
