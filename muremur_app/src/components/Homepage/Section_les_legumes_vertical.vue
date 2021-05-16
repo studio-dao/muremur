@@ -2,7 +2,7 @@
 <template>
   <router-link class="router_link_title_modale" to="/Fruits" >
   <section class="section_produit_vert">
-    <div class="illustration_produit_vert">
+    <div class="illustration_produit_vert" data-aos="zoom-in"  data-aos-duration="1000">
      <img class="brocoli_vert" :src="legumes_illustration.brocoli" alt="brocoli" />
       <img class="avocat_vert"  :src="legumes_illustration.avocat" alt="avocat" />
       <img class="aubergine_vert" :src="legumes_illustration.aubergine" alt="aubergine" />
@@ -31,7 +31,7 @@ export default {
 <!-- STYLE -->
 <style>
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
 .section_produit_vert{
   border-radius: 10px;
   margin: 10px 0;
@@ -103,7 +103,5 @@ letter-spacing: 1px;
   color:#778d78;
   font-size: 10px;
 }
-
-
 }
 </style>

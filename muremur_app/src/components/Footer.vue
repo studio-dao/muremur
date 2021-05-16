@@ -4,7 +4,7 @@
     <div class="separateur"></div>
     <nav class="nav_footer">
       <ul class="ul_footer">
-        <li class="li_footer"><a href="">Contact</a></li>
+        <li class="li_footer"><a href="mailto:muremur@gmail.com">Contact</a></li>
         <li><a href="">Mentions Légales</a></li>
         <li><a href="">Copyright Muremur©</a></li>
       </ul>
@@ -21,6 +21,8 @@ export default {
 
 <!-- STYLE -->
 <style>
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
+
 .footer {
   width: 100%;
   height: 10%;
@@ -53,5 +55,6 @@ a{
   font-size: 12px;
   font-weight: 100;
   text-decoration: none !important;
+}
 }
 </style>

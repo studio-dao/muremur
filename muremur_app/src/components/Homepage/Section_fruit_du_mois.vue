@@ -1,14 +1,14 @@
 <!-- TEMPLATE -->
 <template>
   <section class="section_fdm">
-    <article class="article_fdm">
-      <h3 class="chapeau">Le fruit de la semaine</h3>
-      <h1 class="h1-fdm">Le citron</h1>
-      <p class="texte_fdm">
+    <article class="article_fdm" >
+      <h3 class="chapeau" data-aos="fade-left">Le fruit de la semaine</h3>
+      <h1 class="h1-fdm" data-aos="fade-left">Le citron</h1>
+      <p class="texte_fdm" data-aos="fade-left">
         Découvrez l'histoire étonnante d'un grand voyageur qui a revolutionné le
         goût en Europe...
       </p>
-      <button class="button_fdm">SON HISTOIRE<i class="fas fa-caret-right fa-lg"></i></button>
+      <button class="button_fdm" data-aos="fade-left">SON HISTOIRE<i class="fas fa-caret-right fa-lg"></i></button>
     </article>
   </section>
 </template>
@@ -22,15 +22,10 @@ export default {
 
 <!-- STYLE -->
 <style>
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
 
-@font-face {
-  font-family: "Paytone";
-  src: local("Paytone"),
-    url("~@/assets/fonts/PaytoneOne-Regular.ttf") format("truetype");
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .section_fdm {
     left: 0;
     right: 0;
@@ -83,6 +78,5 @@ export default {
 .fas{
   margin-left: 70px;
 }
-
 }
 </style>

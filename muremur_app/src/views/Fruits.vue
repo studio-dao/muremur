@@ -22,7 +22,4 @@ export default {
 };
 </script>
 
-<!-- STYLE -->
-<style>
 
-</style>

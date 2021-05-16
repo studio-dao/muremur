@@ -1,17 +1,18 @@
 <!-- TEMPLATE -->
 <template>
   <router-link class="router_link_title_modale" to="/Fruits" >
-  <section class="section_produit">
-    <div class="illustration_produit">
+  <section class="section_produit" >
+    <div class="illustration_produit" data-aos="zoom-in-up"  data-aos-duration="1000">
       <img class="ananas"  :src="fruits_illustration.ananas" alt="ananas" />
       <img class="poire" :src="fruits_illustration.poire" alt="poire" />
       <img class="pasteque" :src="fruits_illustration.pasteque" alt="pasteque" />
       </div>
 
-    <article class="article_produit">
-      <h1 class="h1_produit">Les Fruits</h1>
-      <div class="ligne_sous_titre_produit"></div>
-      <p class="texte_produit">Toutes les infos pour bien choisir vos fruits</p>
+    <article class="article_produit"  data-aos="fade-up"
+     data-aos-duration="1000">
+      <h1 class="h1_produit" >Les Fruits</h1>
+      <div class="ligne_sous_titre_produit" ></div>
+      <p class="texte_produit" >Toutes les infos pour bien choisir vos fruits</p>
     </article>
   </section>
   </router-link>
@@ -31,7 +32,7 @@ export default {
 <!-- STYLE -->
 <style>
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
 .section_produit{
   border-radius: 10px;
   margin-bottom: 10px;
@@ -88,12 +89,12 @@ export default {
   margin:  5% 0 0 0;
 color: #5a7516;
 font-family: 'Paytone';
-font-size: 3em;
+font-size: 2.5em;
 }
 
 .ligne_sous_titre_produit{
   background-color: #e9951d;
-  width: 73%;
+  width: 210px;
   height: 5px;
 }
 .texte_produit{
@@ -101,7 +102,6 @@ font-size: 3em;
   color:#778d78;
   font-size: 14px;
 }
-
 
 }
 </style>

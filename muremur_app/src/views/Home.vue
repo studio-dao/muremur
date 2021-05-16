@@ -30,11 +30,13 @@ export default {
 </script>
 <!-- STYLE -->
 <style>
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
 .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 }
 </style>
 

@@ -10,12 +10,14 @@
         <div class="barre_burger"></div>
         <div class="barre_burger"></div>
       </div>
-      <div v-if='open_modale'  @click='openModale();' class="nav_modale" id="nav">
-        <router-link class="router_link_title_modale" to="/"  >ACCUEIL</router-link>
+      <transition name="fade">
+      <div v-if='open_modale' @click='openModale();' class="nav_modale" id="nav">
+        <router-link class="router_link_title_modale" to="/" >ACCUEIL</router-link>
         <router-link class="router_link_title_modale" to="/Fruits" >FRUITS</router-link>
         <router-link class="router_link_title_modale" to="/Legumes">LÉGUMES</router-link>
         <router-link class="router_link_title_modale" to="/A_propos">À PROPOS</router-link>
       </div>
+       </transition>
     </div>
     <div class="separateur"></div>
   </header>
@@ -23,6 +25,7 @@
 
 <!-- SCRIPT -->
 <script>
+
 export default {
   name: "Header",
 
@@ -42,6 +45,8 @@ export default {
 
 <!-- STYLE -->
 <style>
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
+
 .main_header {
   height: 10%;
   display: flex;
@@ -115,5 +120,11 @@ a {
   top:90px;
   z-index: 100;
 }
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+}
 </style>

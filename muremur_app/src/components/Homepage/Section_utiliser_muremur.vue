@@ -23,7 +23,7 @@ export default {
 
 <!-- STYLE -->
 <style>
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
 
 .section_umm {
     border-radius: 10px;

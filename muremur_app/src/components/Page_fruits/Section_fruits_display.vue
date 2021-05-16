@@ -4,9 +4,9 @@
    
     <!-- LIST CTA LEGUME -->
     <div class="main_CTA_produit">
-      <div class="main_list_CTA_produit" v-for="produit in liste_fruits" :key="produit.id" >
-        <button class="button_produit" @click="toggleModale();addToModale(produit);">
-          <img class="picto_produit" :src="produit.picto" alt="icone fruit" />
+      <div class="main_list_CTA_produit"  v-for="produit in liste_fruits" :key="produit.id" >
+        <button class="button_produit" data-aos="fade-left" data-aos-duration="1000" @click="toggleModale();addToModale(produit);" >
+          <img class="picto_produit"  :src="produit.picto" alt="icone fruit" />
           {{ produit.label }}
         </button>
       </div>
@@ -14,7 +14,7 @@
       <!-- MODALE -->
 
       <div  v-if="revele">
-        <div class="main_modale">
+        <div class="main_modale" data-aos="zoom-in" data-aos-duration="600">
           <div class="corps_modale" v-for="item in modaleContent" :key="item.id">
             <!-- entête modale -->
             <div class="entete_modale">
@@ -77,6 +77,8 @@ export default {
 
 <!-- STYLE -->
 <style>
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)  {
+
 .main_CTA_produit {
   padding: 10px 0;
   border-radius: 10px;
@@ -104,11 +106,14 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255,255,255, .8) ;
-  box-shadow: 2px 2px 5px rgba(95, 92, 92, 0.3);
   border: none;
   font-family: 'Paytone';
   font-size: 1.5em;
   color: #dfd512;
+}
+
+.button_produit :hover {
+   box-shadow: 2px 2px 5px rgba(95, 92, 92, 0.3);
 }
 
 .picto_produit {
@@ -180,5 +185,5 @@ export default {
   color: #5a7516;
   font-size: 200%;
 }
-
+}
 </style>

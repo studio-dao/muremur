@@ -5,7 +5,7 @@
     <!-- LIST CTA LEGUME -->
       <div class="main_CTA_produit">
         <div class="list_CTA_produit"  v-for="produit in liste_legumes" :key="produit.id">
-          <button class="button_produit" @click="toggleModale();addToModale(produit)">
+          <button class="button_produit" data-aos="fade-left" data-aos-duration="1000" @click="toggleModale();addToModale(produit)">
             <img class="picto_produit"  :src='produit.picto' alt="icone fruit" />
             {{ produit.label }}
           </button>
@@ -13,7 +13,7 @@
 
       <!-- MODALE -->
       <div  v-if="revele">
-        <div class="main_modale">
+        <div class="main_modale" data-aos="zoom-in" data-aos-duration="600">
           <div class="corps_modale" v-for="item in modaleContent" :key="item.id">
             <!-- entête modale -->
             <div class="entete_modale">
@@ -74,7 +74,5 @@ export default {
 };
 </script>
 
-<!-- STYLE -->
-<style>
+<!-- STYLE  identique à celui de la section_fruit_display-->
 
-</style>
